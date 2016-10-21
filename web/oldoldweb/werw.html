@@ -1,0 +1,22 @@
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"> 
+<title>网页中调用本地exe程序</title> 
+<SCRIPT language=JavaScript> 
+function Run(strPath) { 
+try { 
+var objShell = new ActiveXObject("wscript.shell"); 
+objShell.Run(strPath); 
+objShell = null; 
+} 
+catch (e){alert('找不到文件"'+strPath+'"(或它的组件之一)。请确定路径和文件名是否正确，而且所需的库文件均可用。') 
+} 
+} 
+</SCRIPT> 
+
+</head> 
+<body>   
+<a   href="#"   onclick="Run('C:/Users/Administrator/Desktop/weRw3.0.exe')"> weRw3.0  
+</a>   
+</body> 
+</html>   
